@@ -1,15 +1,33 @@
-
-import logo from '../assets/background.png';
+import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/background.png";
 
 function Navbar() {
+  const location = useLocation();
+
+  // Detecta si estamos en Home
+  const isHome = location.pathname === "/";
+
   return (
     <nav className="navbar">
-      <img src={logo} alt="Learn and Shine" />
+
+      {/* LOGO CLICKEABLE */}
+      <Link to="/" className="logo-link">
+        <img src={logo} alt="Learn and Shine" className="logo" />
+      </Link>
+
+      {/* LINKS */}
       <div className="nav-links">
-        <a href="#about">Nosotros</a>
-        <a href="#services">Servicios</a>
-        <a href="#contact">Contacto</a>
+        <Link to="/">Inicio</Link>
+
+        {isHome && (
+          <>
+            <a href="#about">Nosotros</a>
+            <a href="#services">Servicios</a>
+            <a href="#contact">Contacto</a>
+          </>
+        )}
       </div>
+
     </nav>
   );
 }

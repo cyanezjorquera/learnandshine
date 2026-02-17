@@ -6,6 +6,8 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import ContactoForm from "./components/ContactoForm";
+import Trabajo from "./components/Trabajo";
+import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 
 function Home() {
@@ -22,11 +24,14 @@ function Home() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/escribenos" element={<ContactoForm />} />
+        <Route path="/trabajo" element={<Trabajo />} />
+
 
       </Routes>
 
