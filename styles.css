@@ -1108,7 +1108,7 @@ body {
 
 @media (max-width: 480px) {
 
-  .hero-content h1 {
+  .hero-content {
       margin-right: 0px;
   }
 
