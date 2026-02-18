@@ -17,9 +17,6 @@ body {
 
 }
 
-
-
-
 /* ===============================
    HERO SECTION
 ================================= */
@@ -178,24 +175,6 @@ body {
    RESPONSIVE
 ================================= */
 
-@media (max-width: 768px) {
-  .hero-content {
-    padding: 40px 30px;
-    
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .hero-logo {
-    width: 120px;
-  }
-}
 
 .primary-btn {
   margin-top: 20px;
@@ -315,6 +294,22 @@ body {
 /* ========================= */
 
 @media (max-width: 768px) {
+    .hero-content {
+  height: auto;
+    min-height: 100svh;
+    padding: 120px 20px 60px;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-logo {
+    width: 120px;
+  }
   section {
     padding: 80px 30px;
   }
@@ -327,9 +322,9 @@ body {
     text-align: center;
   }
   
-    .hero-content {
+    .hero-section {
     margin-left: 20px;
-            margin-right: 20px;
+    margin-right: 20px;
         padding: 40px 15px;
   }
 }
@@ -482,11 +477,7 @@ body {
 
 @media (max-width: 768px) {
 
-    .hero-content {
-    margin-left: 20px;
-            margin-right: 20px;
-        padding: 40px 15px;
-  }
+
   .areas-grid {
     gap: 30px;
   }
@@ -619,17 +610,8 @@ body {
 /* RESPONSIVE */
 /* ============================= */
 
-@media (max-width: 768px) {
-  .tabla-section {
-    padding: 80px 20px;
-  }
 
-  .tabla-servicios th,
-  .tabla-servicios td {
-    padding: 14px;
-    font-size: 13px;
-  }
-}
+
 
 /* =============================== */
 /* SECCIÓN GENERAL */
@@ -759,6 +741,23 @@ body {
 
   .contact-form {
     padding: 35px 25px;
+  }
+
+  .tabla-section {
+    padding: 80px 20px;
+  }
+
+  .tabla-servicios th,
+  .tabla-servicios td {
+    padding: 14px;
+    font-size: 13px;
+  }
+  .hero-section {
+    height: auto;
+    min-height: 100svh;
+    padding: 120px 20px 60px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 
 }
@@ -1020,7 +1019,7 @@ body {
   .resultados-grid {
     justify-content: center;
   }
-
+ 
 }
 
 /* =========================================
@@ -1028,16 +1027,9 @@ body {
 ========================================= */
 
 @media (max-width: 768px) {
+ 
 
 
-
-  /* HERO */
-  
-    .hero-content {
-    margin-left: 20px;
-            margin-right: 20px;
-        padding: 40px 15px;
-  }
   
   .hero-content {
     padding: 40px 25px;
@@ -1126,11 +1118,6 @@ body {
 
 @media (max-width: 480px) {
 
-    .hero-content {
-    margin-left: 20px;
-            margin-right: 20px;
-        padding: 40px 15px;
-  }
  
 
   .hero-content h1 {
@@ -1241,11 +1228,7 @@ body {
 
 @media (max-width: 768px) {
 
-  .hero-content {
-    margin-left: 20px;
-            margin-right: 20px;
-        padding: 40px 15px;
-  }
+
 
    .section {
     padding: 80px 10px;   /* 👈 reducimos padding lateral */
@@ -1277,3 +1260,18 @@ body {
 
 }
 
+
+@media (max-width: 480px)
+ {
+
+
+
+  /* HERO */
+  
+    .hero-content {
+   height: auto;
+    min-height: 100svh;
+    padding: 120px 20px 60px;
+
+  }
+}
