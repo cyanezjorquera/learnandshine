@@ -1282,7 +1282,7 @@ body {
   }
 
   .hero-content {
-    border-radius: 18px;
+  padding: 40px 15px;
   }
 
   .hero-content h1 {
