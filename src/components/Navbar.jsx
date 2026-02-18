@@ -9,50 +9,55 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="navbar">
+   <nav className="navbar">
 
-      {/* LOGO */}
-      <Link to="/" className="logo-link" onClick={() => setOpen(false)}>
-        <img src={logo} alt="Learn and Shine" />
-      </Link>
+  <Link 
+    to="/" 
+    className="logo-link" 
+    onClick={() => setOpen(false)}
+  >
+    <img src={logo} alt="Learn and Shine" />
+  </Link>
 
-      {/* LINKS DESKTOP */}
-      <div className="nav-links">
-        <Link to="/">Inicio</Link>
+  <div className={`nav-links ${open ? "active" : ""}`}>
+    {!isHome ? (
+  <>
+    <Link to="/#hero" onClick={() => setOpen(false)}>Inicio</Link>
+    <Link to="/#about" onClick={() => setOpen(false)}>Nosotros</Link>
+    <Link to="/#services" onClick={() => setOpen(false)}>Servicios</Link>
+    <Link to="/#contact" onClick={() => setOpen(false)}>Contacto</Link>
+  </>
+) : (
+  <>
+<Link
+  to="/"
+  onClick={() => {
+    setOpen(false);
 
-        {isHome && (
-          <>
-            <a href="#about">Nosotros</a>
-            <a href="#services">Servicios</a>
-            <a href="#contact">Contacto</a>
-          </>
-        )}
-      </div>
-      <div className="menu-toggle">
-  <Menu size={40} color="red" />
-</div>
+    if (location.pathname === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  }}
+>
+  Inicio
+</Link>
+    <a href="#about" onClick={() => setOpen(false)}>Nosotros</a>
+    <a href="#services" onClick={() => setOpen(false)}>Servicios</a>
+    <a href="#contact" onClick={() => setOpen(false)}>Contacto</a>
+  </>
+)}
 
+  </div>
 
-      {/* HAMBURGUESA */}
-      <div className="menu-toggle" onClick={() => setOpen(!open)}>
-        {open ? <X size={28} color="white" /> : <Menu size={28} color="white" />}
-      </div>
+  <div className="menu-toggle" onClick={() => setOpen(!open)}>
+    {open ? <X size={28} color="white" /> : <Menu size={28} color="white" />}
+  </div>
 
-      {/* MENU MOBILE */}
-      <div className={`mobile-menu ${open ? "open" : ""}`}>
-        <Link to="/" onClick={() => setOpen(false)}>Inicio</Link>
+</nav>
+  );  }
 
-        {isHome && (
-          <>
-            <a href="#about" onClick={() => setOpen(false)}>Nosotros</a>
-            <a href="#services" onClick={() => setOpen(false)}>Servicios</a>
-            <a href="#contact" onClick={() => setOpen(false)}>Contacto</a>
-          </>
-        )}
-      </div>
-
-    </nav>
-  );
-}
 
 export default Navbar;
