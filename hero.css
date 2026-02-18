@@ -1,0 +1,220 @@
+/* ===============================
+   HERO SECTION
+================================= */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh; /* mejor que height fijo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #2F5D50;
+  padding: 120px 20px 60px; /* espacio para navbar fijo */
+}
+
+/* Fondo degradado animado */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    -45deg,
+    #E9EDC9,
+    #A3B18A,
+    #6B8E23,
+    #BC6C25,
+    #2F5D50
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease infinite;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===============================
+   HERO CONTENT
+================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 auto;              /* 👈 ESTO LO CENTRA SIEMPRE */
+  padding: 60px 50px;
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 20px 40px rgba(47, 93, 80, 0.2);
+  max-width: 800px;
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ===============================
+   LOGO
+================================= */
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.hero-logo {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  animation: logoEnter 1.2s ease-out forwards,
+             logoPulse 5s ease-in-out infinite 1.2s;
+}
+
+@keyframes logoEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: drop-shadow(0 0 0 rgba(163, 177, 138, 0));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 25px rgba(163, 177, 138, 0.7));
+  }
+}
+
+@keyframes logoPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(163, 177, 138, 0.6));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 30px rgba(47, 93, 80, 0.8));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(163, 177, 138, 0.6));
+  }
+}
+
+/* ===============================
+   TEXTOS
+================================= */
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2F5D50;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #344E41;
+  line-height: 1.6;
+}
+
+/* ===============================
+   BOTÓN
+================================= */
+
+.hero-content button {
+  background: #2F5D50;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  margin: 0 auto;   /* 👈 ESTO LO CENTRA SIEMPRE */
+
+}
+
+.hero-content button:hover {
+  background: #BC6C25;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(188, 108, 37, 0.3);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 50px 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 110px 20px 50px;
+  }
+
+  .hero-content {
+    padding: 40px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-logo {
+    width: 140px;
+  }
+}
+
+/* iPhone / pantallas pequeñas */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 100px 15px 40px;
+  }
+
+  .hero-content {
+    padding: 30px 18px;
+      margin: 0 auto;              /* 👈 ESTO LO CENTRA SIEMPRE */
+  }
+
+  .hero-content h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-logo {
+    width: 120px;
+  }
+
+  .hero-content button {
+    width: 100%;
+  }
+}
