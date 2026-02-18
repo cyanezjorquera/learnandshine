@@ -1274,18 +1274,51 @@ body {
   }
 }
 
+/* ===============================
+   iPhone 11 (414px hacia abajo)
+================================= */
+
 @media (max-width: 414px) {
 
+  .hero-section {
+    height: auto;              /* evita problemas con 100vh */
+    min-height: 100svh;        /* mejor comportamiento en Safari */
+    padding: 110px 18px 40px;  /* espacio arriba para navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container {
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-logo {
+    width: 130px;
+  }
+
   .hero-content {
-    padding: 25px 5px;
+    width: 95%;
+    padding: 28px 20px;
+    border-radius: 18px;
+    margin: 0 auto;
   }
 
   .hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+    line-height: 1.2;
   }
 
   .hero-content p {
     font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .primary-btn {
+    width: 100%;
+    padding: 14px;
   }
 
 }
+
