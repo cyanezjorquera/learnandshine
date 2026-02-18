@@ -296,7 +296,6 @@ body {
 @media (max-width: 768px) {
     .hero-content {
   height: auto;
-    min-height: 100svh;
     padding: 120px 20px 60px;
   }
   .hero-content h1 {
@@ -473,21 +472,6 @@ body {
   line-height: 1.4;
 }
 
-/* Responsive */
-
-@media (max-width: 768px) {
-
-
-  .areas-grid {
-    gap: 30px;
-  }
-
-  .area-card {
-    width: 250px;
-    height: 250px;
-    padding: 25px;
-  }
-}
 
 /* ============================= */
 /* SECCIÓN GENERAL */
@@ -734,7 +718,15 @@ body {
 /* =============================== */
 
 @media (max-width: 768px) {
+  .areas-grid {
+    gap: 30px;
+  }
 
+  .area-card {
+    width: 250px;
+    height: 250px;
+    padding: 25px;
+  }
   .contact-section {
     padding: 80px 20px;
   }
@@ -1031,9 +1023,7 @@ body {
 
 
   
-  .hero-content {
-    padding: 40px 25px;
-  }
+ 
 
   .hero-content h1 {
     font-size: 2rem;
@@ -1265,7 +1255,6 @@ body {
 
   .hero-section {
     height: auto;              /* evita problemas con 100vh */
-    min-height: 100svh;        /* mejor comportamiento en Safari */
     padding: 110px 18px 40px;  /* espacio arriba para navbar */
     display: flex;
     align-items: center;
@@ -1281,9 +1270,7 @@ body {
     width: 130px;
   }
 
-  .hero-content {
-  padding: 40px 15px;
-  }
+
 
   .hero-content h1 {
     font-size: 1.9rem;
