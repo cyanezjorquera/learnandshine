@@ -32,7 +32,7 @@ function Footer() {
 
   {/* Facebook */}
   <a
-    href="https://www.facebook.com/"
+    href="https://www.facebook.com/LearnandShine"
     target="_blank"
     rel="noopener noreferrer"
     className="social-icon"
@@ -66,17 +66,22 @@ function Footer() {
     </svg>
   </a>
 
-  {/* Threads */}
-  <a
-    href="https://www.threads.net/corporacion.learnandshine"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="social-icon"
+{/* Threads */}
+<a
+  href="https://www.threads.net/corporacion.learnandshine"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="social-icon"
+>
+  <svg
+    viewBox="0 0 24 24"
+    width="20"
+    height="20"
+    fill="currentColor"
   >
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-      <path d="M12 2C6.48 2 2 6.03 2 11.04c0 4.14 3.1 7.52 7.2 7.96v-5.63H7.08v-2.33h2.12V9.41c0-2.1 1.24-3.26 3.14-3.26.91 0 1.86.16 1.86.16v2.05h-1.05c-1.04 0-1.37.63-1.37 1.28v1.53h2.34l-.37 2.33h-1.97V19c4.1-.44 7.2-3.82 7.2-7.96C22 6.03 17.52 2 12 2z"/>
-    </svg>
-  </a>
+    <path d="M16.7 7.3c-1.1-1.1-2.6-1.7-4.5-1.7-3.8 0-6.2 2.5-6.2 6.2 0 3.5 2.2 6 5.6 6 3 0 5.2-1.9 5.2-4.7 0-2.4-1.6-4-4.1-4-1.6 0-2.8.9-3.3 2.2l1.8.5c.2-.6.8-1 1.5-1 1.2 0 2 .8 2 2 0 1.6-1.2 2.6-2.9 2.6-2.3 0-3.7-1.7-3.7-4 0-2.6 1.6-4.3 4.2-4.3 1.3 0 2.2.4 2.9 1.1.5.5.9 1.2 1 2.2-.5-.2-1.2-.3-2-.3v1.6c2.5 0 4.3 1.3 4.3 3.8 0 3.3-2.8 5.6-6.8 5.6C6.5 22 3 18.5 3 13.2 3 7.8 6.7 4 12.2 4c2.5 0 4.4.8 5.9 2.3L16.7 7.3z"/>
+  </svg>
+</a>
 
 </div>
 
