@@ -19,13 +19,13 @@ body {
 
 .navbar {
   position: fixed;
-  width: 95%;
+  width: 100%;
   top: 0;
   background: rgba(47,111,111,0.95);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 15px 30px;
   z-index: 1000;
 }
 
@@ -33,12 +33,20 @@ body {
   height: 55px;
 }
 
+.nav-links {
+  display: flex;
+  gap: 25px; /* espacio limpio entre elementos */
+  margin-right: 40px;  
+
+}
+
 .nav-links a {
   color: white;
-  margin-left: 25px;
   text-decoration: none;
   font-weight: 500;
 }
+
+
 
 /* ===============================
    HERO SECTION
@@ -238,7 +246,13 @@ body {
   margin: auto;
   text-align: center;
 }
-
+.section p{
+  color: #1f3c88;
+  text-align: justify;
+}
+.section h2{
+  color: #1f3c88
+}
 .alt {
   background: white;
 }
@@ -938,4 +952,253 @@ body {
 
 .contacto-dato:hover {
   color: #6bbf59;
+}
+
+/* ===== HAMBURGUESA ===== */
+
+.menu-toggle {
+  display: none;
+
+}
+
+/* ===== MENU MOBILE ===== */
+
+.mobile-menu {
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  background: rgba(47,111,111,0.98);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 30px 0;
+  transform: translateY(-150%);
+  transition: 0.4s ease;
+  z-index: 999;
+}
+
+.mobile-menu a {
+  color: rgb(20, 12, 12);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+}
+/* =========================================
+   TABLET (1024px hacia abajo)
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .section {
+    padding: 100px 60px;
+  }
+
+  .areas-section {
+    padding: 100px 40px;
+  }
+
+  .tabla-section {
+    padding: 100px 40px;
+  }
+
+  .contacto-grid {
+    gap: 40px;
+  }
+
+  .resultados-grid {
+    justify-content: center;
+  }
+
+}
+
+/* =========================================
+   MOBILE (768px hacia abajo)
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    top: 70px;
+  }
+
+  /* HERO */
+  .hero-section {
+    height: auto;
+    padding: 140px 20px 80px 20px;
+  }
+
+  .hero-content {
+    padding: 40px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-logo {
+    width: 120px;
+  }
+
+  /* SECCIONES */
+  .section {
+    padding: 80px 25px;
+  }
+
+  /* CARDS */
+  .cards-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .card {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  /* AREAS CIRCULARES */
+  .area-card {
+    width: 230px;
+    height: 230px;
+  }
+
+  /* TABLA */
+  .tabla-section {
+    padding: 80px 20px;
+  }
+
+  .tabla-servicios th,
+  .tabla-servicios td {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  /* CONTACTO GRID */
+  .contacto-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contacto-card {
+    padding: 50px 30px;
+  }
+
+  /* RESULTADOS */
+  .resultados-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resultado h4 {
+    font-size: 28px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
+/* =========================================
+   MOBILE PEQUEÑO (480px hacia abajo)
+========================================= */
+
+@media (max-width: 480px) {
+
+ 
+
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .primary-btn {
+    width: 100%;
+  }
+
+  .area-card {
+    width: 200px;
+    height: 200px;
+  }
+ 
+  .primary-btn {
+    width: 100%;
+  }
+
+    .hero-logo {
+      width: 130px;
+    
+  }
+  .logo-container {
+    padding-top: 0px;
+  }
+
+   .hero-content {
+     margin-right: 20px;
+     padding: 40px 15px;
+  }
+
+     .section {
+    padding: 80px 10px;   /* 👈 reducimos padding lateral */
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+      flex: none;          /* 👈 elimina el crecimiento automático */
+      width: 320px;        /* 👈 tamaño fijo */
+      max-width: 90%;
+  }
+
+  
+ 
+
+     .tabla-container {
+      margin-right: 20px;
+      padding: 40px 15px;  
+      max-width: 90%;
+     }
+
+
 }

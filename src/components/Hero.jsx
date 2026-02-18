@@ -18,7 +18,7 @@ function Hero() {
           habilidades y entornos para que desarrollen su máximo potencial y 
           construyan un futuro con confianza.</p>
         <Link to="/trabajo" className="primary-btn">
-        Conoce nuestros trabajos
+        Conócenos
         </Link>
       </div>
  
