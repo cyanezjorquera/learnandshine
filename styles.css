@@ -1277,9 +1277,7 @@ body {
 @media (max-width: 414px) {
 
   .hero-content {
-    padding: 25px 18px;
-    width: 94%;
-    border-radius: 18px;
+    padding: 25px 5px;
   }
 
   .hero-content h1 {
