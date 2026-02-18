@@ -1,0 +1,174 @@
+
+/* ===============================
+   HERO BASE
+================================= */
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 👈 clave */
+
+  padding-top: 100px;   /* espacio navbar */
+  padding-bottom: 30px; /* mínimo abajo */
+  padding-left: 20px;
+  padding-right: 20px;
+
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #3E3A34;
+    background: red !important;
+
+}
+
+/* ===============================
+   FONDO TIERRA + VERDE ANIMADO
+================================= */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: linear-gradient(
+    -45deg,
+    #E8D8C3,
+    #C2A27C,
+    #7B8C52,
+    #4E6A3D,
+    #A67C52
+  );
+
+  background-size: 400% 400%;
+  animation: earthGreenMove 18s ease infinite;
+}
+
+@keyframes earthGreenMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===============================
+   HERO CONTENT
+================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+
+  text-align: center;
+
+  padding: 40px 25px; /* 👈 reducido */
+  border-radius: 24px;
+
+  background: rgba(255, 248, 235, 0.65);
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 20px 50px rgba(62, 58, 52, 0.25);
+}
+
+/* ===============================
+   LOGO
+================================= */
+
+.hero-logo {
+  width: 170px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+/* ===============================
+   TEXTOS
+================================= */
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* ===============================
+   BOTÓN
+================================= */
+
+.hero-btn {
+  background: linear-gradient(135deg, #4E6A3D, #232c05);
+  color: white;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(62, 58, 52, 0.35);
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding-top: 90px;   /* solo navbar */
+    padding-bottom: 20px;
+  }
+
+  .hero-content {
+    padding: 30px 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-logo {
+    width: 130px;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 15px;
+  }
+
+  .hero-content {
+    padding: 25px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+}

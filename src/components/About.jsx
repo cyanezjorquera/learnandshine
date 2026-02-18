@@ -1,13 +1,16 @@
 function About() {
   return (
     <section id="about" className="section">
-
-      <h2>Cómo nace Learn & Shine</h2>
-      <p>
-        Nace como una luz de esperanza para niños y jóvenes neurodivergentes,
-        ofreciendo acompañamiento integral basado en la neurociencia,
-        el desarrollo humano y el bienestar comunitario.
-      </p>
+      <div className="cards-container">
+        <div className="card card-nace">
+          <h2>¿Cómo nace Learn & Shine?</h2>
+          <p>
+          Nace como una luz de esperanza para niños y jóvenes neurodivergentes,
+          ofreciendo acompañamiento integral basado en la neurociencia,
+          el desarrollo humano y el bienestar comunitario.
+        </p>
+      </div>
+      </div>
 
       <div className="cards-container">
 

@@ -4,14 +4,14 @@
 
 .hero-section {
   position: relative;
-  min-height: 100vh; /* mejor que height fijo */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+  padding: 120px 20px 60px; /* espacio arriba por navbar */
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
   color: #2F5D50;
-  padding: 120px 20px 60px; /* espacio para navbar fijo */
 }
 
 /* Fondo degradado animado */
@@ -169,12 +169,14 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .hero-section {
-    padding: 110px 20px 50px;
+
+ .hero-section {
+    padding: 100px 20px 40px;
   }
 
   .hero-content {
     padding: 40px 25px;
+    animation: none;
   }
 
   .hero-content h1 {
@@ -188,18 +190,13 @@
   .hero-logo {
     width: 140px;
   }
+  
 }
 
 /* iPhone / pantallas pequeñas */
 @media (max-width: 480px) {
-  .hero-section {
-    padding: 100px 15px 40px;
-  }
+ 
 
-  .hero-content {
-    padding: 30px 18px;
-      margin: 0 auto;              /* 👈 ESTO LO CENTRA SIEMPRE */
-  }
 
   .hero-content h1 {
     font-size: 1.7rem;

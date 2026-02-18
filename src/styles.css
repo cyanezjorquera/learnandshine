@@ -17,9 +17,6 @@ body {
 
 }
 
-
-
-
 /* ===============================
    HERO SECTION
 ================================= */
@@ -178,23 +175,6 @@ body {
    RESPONSIVE
 ================================= */
 
-@media (max-width: 768px) {
-  .hero-content {
-    padding: 40px 30px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .hero-logo {
-    width: 120px;
-  }
-}
 
 .primary-btn {
   margin-top: 20px;
@@ -314,6 +294,18 @@ body {
 /* ========================= */
 
 @media (max-width: 768px) {
+ 
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-logo {
+    width: 120px;
+  }
   section {
     padding: 80px 30px;
   }
@@ -324,6 +316,12 @@ body {
 
   .card {
     text-align: center;
+  }
+  
+    .hero-section {
+    margin-left: 20px;
+    margin-right: 20px;
+        padding: 40px 15px;
   }
 }
 
@@ -471,19 +469,6 @@ body {
   line-height: 1.4;
 }
 
-/* Responsive */
-
-@media (max-width: 768px) {
-  .areas-grid {
-    gap: 30px;
-  }
-
-  .area-card {
-    width: 250px;
-    height: 250px;
-    padding: 25px;
-  }
-}
 
 /* ============================= */
 /* SECCIÓN GENERAL */
@@ -606,17 +591,8 @@ body {
 /* RESPONSIVE */
 /* ============================= */
 
-@media (max-width: 768px) {
-  .tabla-section {
-    padding: 80px 20px;
-  }
 
-  .tabla-servicios th,
-  .tabla-servicios td {
-    padding: 14px;
-    font-size: 13px;
-  }
-}
+
 
 /* =============================== */
 /* SECCIÓN GENERAL */
@@ -739,13 +715,37 @@ body {
 /* =============================== */
 
 @media (max-width: 768px) {
+  .areas-grid {
+    gap: 30px;
+  }
 
+  .area-card {
+    width: 250px;
+    height: 250px;
+    padding: 25px;
+  }
   .contact-section {
     padding: 80px 20px;
   }
 
   .contact-form {
     padding: 35px 25px;
+  }
+
+  .tabla-section {
+    padding: 80px 20px;
+  }
+
+  .tabla-servicios th,
+  .tabla-servicios td {
+    padding: 14px;
+    font-size: 13px;
+  }
+  .hero-section {
+    height: auto;
+    padding: 120px 20px 60px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 
 }
@@ -1007,7 +1007,7 @@ body {
   .resultados-grid {
     justify-content: center;
   }
-
+ 
 }
 
 /* =========================================
@@ -1015,19 +1015,11 @@ body {
 ========================================= */
 
 @media (max-width: 768px) {
+ 
 
 
-
-  /* HERO */
-  .hero-section {
-    height: auto;
-    padding: 100px 20px 80px 20px;
-     padding-top: 100px;
-  }
-
-  .hero-content {
-    padding: 40px 25px;
-  }
+  
+ 
 
   .hero-content h1 {
     font-size: 2rem;
@@ -1143,10 +1135,7 @@ body {
     padding-top: 0px;
   }
 
-   .hero-content {
-     margin-right: 20px;
-     padding: 40px 15px;
-  }
+
 
      .section {
     padding: 80px 10px;   /* 👈 reducimos padding lateral */
@@ -1220,6 +1209,11 @@ body {
 
 @media (max-width: 768px) {
 
+
+
+   .section {
+    padding: 80px 10px;   /* 👈 reducimos padding lateral */
+  }
   .logo-link {
     display: none;
   }
@@ -1243,6 +1237,50 @@ body {
 
   .menu-toggle {
     display: block;
+  }
+
+}
+
+
+
+/* ===============================
+   iPhone 11 (414px hacia abajo)
+================================= */
+
+@media (max-width: 414px) {
+
+  .hero-section {
+    height: auto;              /* evita problemas con 100vh */
+    padding: 110px 18px 40px;  /* espacio arriba para navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container {
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-logo {
+    width: 130px;
+  }
+
+
+
+  .hero-content h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .primary-btn {
+    width: 100%;
+    padding: 14px;
   }
 
 }
